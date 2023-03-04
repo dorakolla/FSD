@@ -6,6 +6,8 @@
 }
 body{
     font-size: 30px;
+    background-color: #ECF2FF;
+    color: #3F497F;
 }
 #gameBoard{
     display: grid;
@@ -15,7 +17,8 @@ body{
     place-items: center;
 }
 .item:nth-child(25)~.item{
-    border-bottom: 2px solid black;
+    border-bottom:2px  solid black;
+    
 }
 .item:nth-child(5n){
     border-right:2px solid black;

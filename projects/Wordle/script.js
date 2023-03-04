@@ -7,12 +7,24 @@ let chance5=Array.from(document.querySelectorAll('#item21,#item22,#item23,#item2
 let chance6=Array.from(document.querySelectorAll('#item26,#item27,#item28,#item29,#item30'));
 let chances=[chance1,chance2,chance3,chance4,chance5,chance6];
 let i = 1;
+let checkremove=true;
     window.addEventListener("keydown",(e)=>{
         let x = document.getElementById(`item${i}`);
-        if (e.key!="Enter"){
+        if (e.key=="Backspace"){
+            checkremove=false;
+            console.log("backspace");
+            i--;
+            let x = document.getElementById(`item${i}`);
+            x.innerText="";
+
+        }
+        if (e.key!="Enter" && e.key!="Backspace" ){
             x.innerText=e.key;
         }
-        i++;
+        if (checkremove){
+            i++;
+        }
+
     }
     )
 
@@ -52,32 +64,43 @@ document.addEventListener("keydown",(e)=>{
 })
 
 
+
 function check(chance){
-    let i=0
+    todayWord=todayWord.toLowerCase();
+    console.log(todayWord);
     var Word=todayWord.split("");
-    var visited={}
-    Word.forEach(element => {
-        visited[element]=false;
-    });
+    
+    let flag=true;
     for (let index = 0; index < 5; index++) {
         if (Word.includes(chance[index].innerText) && Word[index]==chance[index].innerText ){
             var id=chance[index].id;
             let x = document.getElementById(`${id}`);
             x.style.background="green";
+            x.style.color="white";
         }
         else if(Word.includes(chance[index].innerText)){
             var id=chance[index].id;
             let x = document.getElementById(`${id}`);
             x.style.background="yellow";
+            x.style.color="white";
+            flag=false;
         }
         else{
             var id=chance[index].id;
             let x = document.getElementById(`${id}`);
             x.style.background="red";
+            x.style.color="white";
+            flag=false;
         }
 
-    }   
-        
+    } 
+    setTimeout(() => {
+    if (flag){
+        alert("You Won");
+    }
+}, 100);
+    
 }
 
 
+// playerWon
