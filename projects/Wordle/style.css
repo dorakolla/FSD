@@ -1,0 +1,40 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+}
+body{
+    font-size: 30px;
+}
+#gameBoard{
+    display: grid;
+    /* width:400px;
+    height:400px; */
+    grid-template-columns: repeat(5, 1fr);
+    place-items: center;
+}
+.item:nth-child(25)~.item{
+    border-bottom: 2px solid black;
+}
+.item:nth-child(5n){
+    border-right:2px solid black;
+} 
+#title{
+    position: absolute;
+    top:10px;
+}
+#container{
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.item{
+    width: 70px;
+    height: 60px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+}

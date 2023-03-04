@@ -1,0 +1,64 @@
+*{
+    padding:0px;
+    margin: 0px;
+    box-sizing: border-box;
+    font-size: 54px;
+}
+:root{
+    --winningBlocks:#2d414b;
+}
+body{
+    background-color: #ECF2FF;
+    font-family:'Finger Paint',cursive;
+    color: #3E54AC;
+
+}
+
+#container{
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:40px;
+    flex-direction: column;
+    gap: 40px;
+}
+#gameBoard{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 450px;
+
+    justify-content: center;
+    align-items: center;
+
+}
+.box{
+    height: 150px;
+    width: 150px;
+    border-bottom: 2px solid #3E54AC;
+    border-right:2px solid #3E54AC;
+}
+/* .box:nth-child(3n){
+    border-right: none;
+}
+.box:nth-child(6)~.box{
+    border-bottom: none;
+} */
+.brr{
+    border-right: 0px;
+}
+.bbr{
+    border-bottom: 0px;
+}
+button{
+    padding: 15px 30px;
+    background-color: #3E54AC;
+    border-radius: 5px;
+    border: none;
+    color: #ECF2FF;
+    font-size: 20px;
+}
+button:hover{
+    cursor: pointer;
+    transition: translateY(-2px);
+}

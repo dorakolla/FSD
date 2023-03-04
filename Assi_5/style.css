@@ -1,0 +1,17 @@
+*{
+    padding: 0px;
+    margin: 0px;
+
+}
+h1{
+    cursor: pointer;
+}
+p{
+    padding:10px;
+}
+.buttons{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    padding: 40px;
+}
