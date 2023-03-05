@@ -82,7 +82,7 @@ function check(chance){
             var id=chance[index].id;
             let x = document.getElementById(`${id}`);
             x.style.background="yellow";
-            x.style.color="white";
+            x.style.color="black";
             flag=false;
         }
         else{
@@ -96,7 +96,9 @@ function check(chance){
     } 
     setTimeout(() => {
     if (flag){
-        alert("You Won");
+        let messagediv=document.querySelector(".message");
+        messagediv.style.display="block";
+
     }
 }, 100);
     

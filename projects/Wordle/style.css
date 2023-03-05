@@ -15,6 +15,7 @@ body{
     height:400px; */
     grid-template-columns: repeat(5, 1fr);
     place-items: center;
+    z-index: 1;
 }
 .item:nth-child(25)~.item{
     border-bottom:2px  solid black;
@@ -40,4 +41,18 @@ body{
     height: 60px;
     border-top: 2px solid black;
     border-left: 2px solid black;
+}
+.emoji{
+animation: 2s ease-in-out;
+}
+
+.message{
+    animation: 2s ease-in-out;
+
+    padding: 80px;
+    position: absolute;
+    background-color: white;
+    z-index: 100;
+    transition: width 2s;
+    border-radius: 10px;
 }
