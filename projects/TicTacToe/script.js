@@ -1,6 +1,7 @@
 
 let container=document.querySelector("#container");
 let select=document.querySelector("#select");
+// default board size is 3
 let boardSize=3;
 let restartBtn=document.querySelector("#restart");
 createBoard(boardSize);
